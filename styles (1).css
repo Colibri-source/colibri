@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Import retro arcade pixelated font */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Press Start 2P', cursive; /* Retro arcade pixelated font */
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+}
+
+#bird {
+    width: 400px;
+    transition: transform 0.8s;
+    transform-origin: center; /* Ensure the center of the bird responds to the hovering mouse */
+}
+
+#bird:hover {
+    transform: scale(0.8);
+    transition: transform 0.3s;
+}
+
+#text-wrapper {
+    position: absolute;
+    border: 2px solid green; /* Red, solid border with a width of 2 pixels */
+    color: #0f0; /* Text color should be green (#0f0) */
+    background-color: transparent; /* Background color to transparent */
+    padding: 5px; /* Padding of 5 pixels on all sides */
+    font-family: 'Press Start 2P', cursive; /* Retro arcade pixelated font */
+    white-space: nowrap; /* Ensure text is displayed on a single line */
+    height: 50px; /* Fixed height for the box */
+    min-width: 210px; /* Minimum width of 200px */
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#text-container {
+    width: 100%;
+    height: 100%;
+    color: inherit; /* Inherit text color from parent */
+    font-family: inherit; /* Inherit font from parent */
+    opacity: 0;
+    hyphens: auto;
+    display: flex;
+    align-items: center; /* Center text vertically */
+    border: none; /* Remove any border styles */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+#gir-button {
+    position: absolute;
+    background-color: #00FF00;
+    color: black;
+    border: none; /* Remove border radius for sharp edges */
+    padding: 20px 30px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: 'Press Start 2P', cursive; /* Retro arcade pixelated font */
+}
+
+#new-text-wrapper {
+    border: 2px solid green;
+    box-shadow: 0 0 10px green;
+    animation: dragOpen 0.8s forwards;
+    transform-origin: top left;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fillable-blank {
+    width: 80%;
+    padding: 10px;
+    margin: 20px 0; /* Decreased distance among each blank */
+    border: 2px solid green;
+    background-color: black;
+    color: #0f0;
+    font-family: 'Press Start 2P', cursive; /* Retro arcade pixelated font */
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.fillable-blank::placeholder {
+    color: #0f0;
+    opacity: 0.5;
+}
+
+#send-button {
+    background-color: #00FF00;
+    color: black;
+    border: none;
+    padding: 15px 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive; /* Retro arcade pixelated font */
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 1s, transform 0.1s;
+}
+
+#send-button:active {
+    transform: scale(0.95); /* Push in effect when clicked */
+}
+
+#send-button:hover {
+    background-color: #0f0;
+}
+
+@keyframes dragOpen {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 635px; /* Adjust width as needed */
+        height: 520px; /* Adjust height as needed */
+        opacity: 1;
+    }
+}

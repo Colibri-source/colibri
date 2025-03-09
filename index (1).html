@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <img id="bird" src="COLIBRI111111.png" alt="Bird">
+        <div id="text-wrapper">
+            <div id="text-container"></div>
+        </div>
+        <button id="gir-button">Colibri</button>
+    </div>
+
+    <!-- Form for sending data through Formspree -->
+    <form id="contact-form" action="https://formspree.io/f/xkgoaqzr" method="POST" style="display: none;">
+        <input type="text" name="name-surname" class="fillable-blank" placeholder="Name Surname" required>
+        <input type="text" name="username" class="fillable-blank" placeholder="Username" required>
+        <input type="text" name="class" class="fillable-blank" placeholder="Class" required>
+        <input type="text" name="phone-number" class="fillable-blank" placeholder="Phone Number" required>
+        <input type="email" name="e-mail" class="fillable-blank" placeholder="E-mail" required>
+        <button type="submit" id="send-button" class="send-button">Send</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
